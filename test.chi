@@ -1,0 +1,2 @@
+chai_say "Starting the system..."
+chai_say "Hello from Go"
