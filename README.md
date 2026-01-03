@@ -1,4 +1,4 @@
-# Chai Language ☕
+# chai-lang
 
 A programming language brewed for tea lovers.
 
@@ -18,6 +18,7 @@ A programming language brewed for tea lovers.
    ```
 
 2. Build the compiler:
+
    ```bash
    go build -o chai compiler/cmd/main.go
    ```

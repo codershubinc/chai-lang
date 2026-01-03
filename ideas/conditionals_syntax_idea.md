@@ -51,9 +51,12 @@ if (x == 5) {
   // code
 }
 ```
+
 ## 5. The "Hinglish" Metaphor (Authentic)
+
 Using Hindi words since "Chai" is Hindi.
 **Syntax:**
+
 ```javascript
 agar (sugar == 0) {
     sip "Add sugar!"
@@ -63,8 +66,10 @@ agar (sugar == 0) {
 ```
 
 ## 6. The "Experiment" Metaphor
+
 Trying a sip to see if it's good.
 **Syntax:**
+
 ```javascript
 try_sip (is_hot) {
     drink
@@ -74,8 +79,10 @@ try_sip (is_hot) {
 ```
 
 ## 7. The "When" Metaphor (State Based)
+
 Checking the state of the chai.
 **Syntax:**
+
 ```javascript
 when (color == "brown") {
     stop_boiling
