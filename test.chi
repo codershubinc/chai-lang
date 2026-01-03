@@ -1,2 +1,5 @@
-chai_say "Starting the system..."
-chai_say "Hello from Go"
+
+chai_say "Hello from chai-lang"
+
+chai_say "688"
+

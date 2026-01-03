@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="tea-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D2691E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <path d="M9,18 L9,44 C9,51.7 15.3,58 23,58 L41,58 C48.7,58 55,51.7 55,44 L55,18 Z" fill="#F5F5F5" stroke="#A0A0A0" stroke-width="2"/>
+  <path d="M55,22 C58.3,22 61,24.7 61,28 L61,38 C61,41.3 58.3,44 55,44" fill="none" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round"/>
+  
+  <path d="M11,20 L11,44 C11,50.6 16.4,56 23,56 L41,56 C47.6,56 53,50.6 53,44 L53,20 Z" fill="url(#tea-gradient)"/>
+  
+  <text x="32" y="42" font-family="monospace" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">&gt;_</text>
+  
+  <path d="M24,14 C24,10 28,10 28,6" fill="none" stroke="#D2691E" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <animate attributeName="d" values="M24,14 C24,10 28,10 28,6;M24,12 C28,12 28,8 32,8;M24,14 C24,10 28,10 28,6" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite" />
+  </path>
+  <path d="M32,12 C32,8 36,8 36,4" fill="none" stroke="#D2691E" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <animate attributeName="d" values="M32,12 C32,8 36,8 36,4;M32,10 C36,10 36,6 40,6;M32,12 C32,8 36,8 36,4" dur="3s" begin="0.5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" begin="0.5s" repeatCount="indefinite" />
+  </path>
+  <path d="M40,14 C40,10 44,10 44,6" fill="none" stroke="#D2691E" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <animate attributeName="d" values="M40,14 C40,10 44,10 44,6;M40,12 C44,12 44,8 48,8;M40,14 C40,10 44,10 44,6" dur="3s" begin="1s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" begin="1s" repeatCount="indefinite" />
+  </path>
+</svg>
