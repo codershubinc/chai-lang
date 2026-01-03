@@ -2,13 +2,16 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"myLang/compiler/internal/evaluator"
-	"myLang/compiler/internal/laxer"
+	"myLang/compiler/internal/lexer"
 	"myLang/compiler/internal/parser"
 	"os"
 )
 
 func main() {
+	// Remove timestamps for cleaner logs
+	log.SetFlags(0)
 
 	// 1. Check for file argument
 	// Ensure that a filename is provided as a command-line argument.
@@ -32,8 +35,11 @@ func main() {
 	// 2. The Pipeline
 	// Create a new lexer to tokenize the input code.
 	l := laxer.NewLexer(code)
+
 	// Create a new parser to parse the tokens into an AST.
 	p := parser.NewParser(l)
+
+	log.Println("")
 	// Parse the program to get the AST.
 	program := p.ParseProgram()
 

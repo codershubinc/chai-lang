@@ -1,6 +1,8 @@
 package ast
 
-import "myLang/compiler/internal/tokens"
+import (
+	"myLang/compiler/internal/tokens"
+)
 
 // Node is the base interface for everything in the AST (Abstract Syntax Tree).
 // All nodes in the AST must implement this interface.

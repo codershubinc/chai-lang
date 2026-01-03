@@ -2,7 +2,7 @@ package parser
 
 import (
 	"myLang/compiler/internal/ast"
-	"myLang/compiler/internal/laxer"
+	"myLang/compiler/internal/lexer"
 	"myLang/compiler/internal/tokens"
 )
 
