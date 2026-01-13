@@ -3,3 +3,4 @@ chai_say "Hello from chai-lang"
 
 chai_say "688"
 
+chai_say "chai_say"
