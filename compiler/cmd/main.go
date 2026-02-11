@@ -3,9 +3,10 @@ package main
 import (
 	"fmt"
 	"log"
-	"myLang/compiler/internal/evaluator"
-	"myLang/compiler/internal/lexer"
+	"myLang/compiler/internal/compiler"
+	laxer "myLang/compiler/internal/lexer"
 	"myLang/compiler/internal/parser"
+	"myLang/compiler/internal/vm"
 	"os"
 )
 
@@ -43,7 +44,37 @@ func main() {
 	// Parse the program to get the AST.
 	program := p.ParseProgram()
 
-	// 3. Run it
-	// Evaluate the AST to execute the program.
-	evaluator.Eval(program)
+	// 3. Compile to bytecode
+	// Create a new compiler instance.
+	comp := compiler.New()
+
+	// Compile the AST into bytecode.
+	err = comp.Compile(program)
+	if err != nil {
+		fmt.Printf("Compilation error: %v\n", err)
+		return
+	}
+
+	// Get the compiled bytecode.
+	bc := comp.Bytecode()
+
+	// Save bytecode to file
+	bytecodeFile := filename[:len(filename)-4] + ".bc"
+	err = bc.WriteToBinaryFile(bytecodeFile)
+	if err != nil {
+		fmt.Printf("Error writing bytecode file: %v\n", err)
+		return
+	}
+	fmt.Printf("Bytecode written to: %s\n", bytecodeFile)
+
+	// 4. Run the bytecode in the VM
+	// Create a new VM with the bytecode.
+	machine := vm.New(bc)
+
+	// Execute the bytecode.
+	err = machine.Run()
+	if err != nil {
+		fmt.Printf("Runtime error: %v\n", err)
+		return
+	}
 }

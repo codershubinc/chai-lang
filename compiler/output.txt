@@ -1,0 +1,5 @@
+
+Bytecode written to: ../test.bc
+Hello from chai-lang
+688
+chai_say
